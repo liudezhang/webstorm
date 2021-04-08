@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    /*height: 1000px;*/
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 12px;
+
+}
+
+.head {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    height: 45px;
+    line-height: 45px;
+    align-items: center;
+    background-color: white;
+    transform: translateX(-50%);
+    border-bottom: 1px solid silver;
+    z-index: 999;
+}
+
+.head div {
+    flex: 1;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    color: #666666;
+    padding-left: 30px;
+    margin: 0 5px;
+    position: relative;
+}
+
+.head div::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: url("../images/sprite.png") no-repeat -59px -278px;
+    background-size: 104px auto;
+}
+
+.head a {
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    /*background-color: red;*/
+    color: #099fde;
+    padding-top: 14px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.head a::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 13px;
+    width: 25px;
+    height: 25px;
+    background: url("../images/sprite.png") no-repeat -59px -190px;
+    background-size: 104px auto;
+}
+
+.lbt {
+    width: 100%;
+    height: 100px;
+    margin-top: 45px;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.lbt ol {
+    width: 500%;
+    height: 100%;
+    margin-left: -100%;
+}
+
+.lbt ol li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    z-index: 9999;
+    /*background-color: red;*/
+}
+
+.lbt .xs {
+    /*display: block;*/
+}
+
+.lbt ol li img {
+    width: 100%;
+    height: 100%;
+}
+
+.lbt ul {
+    display: flex;
+    height: 8px;
+    line-height: 8px;
+    /*background: red;*/
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    list-style: none;
+    z-index: 99;
+}
+
+.lbt ul li {
+    align-items: center;
+    float: left;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    margin: 0 2px;
+    transition: all .3s;
+}
+
+.lbt ul .checked {
+    width: 15px;
+    border-radius: 30%;
+}
+
+.nav ul {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    background: white;
+    list-style: none;
+    margin: 0 0 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
+.nav ul li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.nav ul li:nth-child(1) span:nth-child(1) {
+    width: 32px;
+    height: 32px;
+    background: url("../images/localnav_bg.png") no-repeat 0 0;
+    background-size: 32px auto;
+    margin-bottom: 5px;
+}
+
+.nav ul li:nth-child(2) span:nth-child(1) {
+    width: 32px;
+    height: 32px;
+    background: url("../images/localnav_bg.png") no-repeat 0 -32px;
+    background-size: 32px auto;
+    margin-bottom: 5px;
+}
+
+.nav ul li:nth-child(3) span:nth-child(1) {
+    width: 32px;
+    height: 32px;
+    background: url("../images/localnav_bg.png") no-repeat 0 -64px;
+    background-size: 32px auto;
+    margin-bottom: 5px;
+}
+
+.nav ul li:nth-child(4) span:nth-child(1) {
+    width: 32px;
+    height: 32px;
+    background: url("../images/localnav_bg.png") no-repeat 0 -96px;
+    background-size: 32px auto;
+    margin-bottom: 5px;
+}
+
+.nav ul li:nth-child(5) span:nth-child(1) {
+    width: 32px;
+    height: 32px;
+    background: url("../images/localnav_bg.png") no-repeat 0 -128px;
+    background-size: 32px auto;
+    margin-bottom: 5px;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    /*border: 1px solid red;*/
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+section > div {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+section .hotel {
+    /*background: #fa6a54;*/
+    background: linear-gradient(to right, #fa5a55, #fa994d);
+}
+
+section .ticket {
+    /*background: #4d9aed;*/
+    background: linear-gradient(to right, #4B90ED, #53BCED);
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+section .travel {
+    background: linear-gradient(to right, #34C2A9, #6CD559);
+    /*background: #4bca8a;*/
+}
+
+section > div > div {
+    flex: 1;
+    text-align: center;
+}
+
+section > div > div:nth-child(1) {
+    height: 100px;
+    line-height: 40px;
+}
+
+section > div {
+    position: relative;
+}
+
+section > div:nth-child(1) > div:nth-child(1):after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    width: 20%;
+    height: 60px;
+    /*background: red;*/
+    background: url("../images/sprite.png") no-repeat 0 -258px;
+    background-size: 208px auto;
+}
+
+section > div:nth-child(2) > div:nth-child(1):after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    width: 20%;
+    height: 60px;
+    /*background: red;*/
+    background: url("../images/sprite.png") no-repeat 0 -363px;
+    background-size: 208px auto;
+}
+
+section > div:nth-child(3) > div:nth-child(1):after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    width: 20%;
+    height: 60px;
+    /*background: red;*/
+    background: url("../images/sprite.png") no-repeat 0 -475px;
+    background-size: 208px auto;
+}
+
+
+section > div > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section > div > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section > div > div:nth-child(2) > span {
+    flex: 1;
+    height: 44px;
+    line-height: 44px;
+}
+
+section > div > div:nth-child(3) > span {
+    flex: 1;
+    height: 44px;
+    line-height: 44px;
+}
+
+section > div > div:nth-child(2) {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+section > div > div:nth-child(2) > span:nth-child(1) {
+    border-bottom: 2px solid white;
+}
+
+section > div > div:nth-child(3) > span:nth-child(1) {
+    border-bottom: 2px solid white;
+}
+
+.lb {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.lb > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.lb > ul > li {
+    flex: 20%;
+    line-height: 100%;
+    text-align: center;
+    /*background: red;*/
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+
+.lb > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.lb ul li a span:nth-child(1) {
+    display: inline-block;
+    width: 24px;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    background: url("../images/subnav-bg.png") no-repeat 0 0;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(2) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 5px -25px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(3) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 3px -51px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(4) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 0 -83px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(5) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 2px -110px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(6) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 5px -139px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(7) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 3px -169px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(8) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 0 -193px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(9) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 0 -218px;
+    background-size: 24px auto;
+}
+
+.lb ul li:nth-child(10) a span:nth-child(1) {
+    background: url("../images/subnav-bg.png") no-repeat 5px -243px;
+    background-size: 24px auto;
+}

@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 500px;
+    background: linear-gradient(to bottom, #325360, #828577, #635c56);
+    /* background: url(../images/timg.jpg)no-repeat 0 0; */
+    background-size: 100% auto;
+    margin: 100px auto;
+}
+
+section div {
+    display: flex;
+    width: 60%;
+    height: 50px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    margin: 10px auto;
+    padding: 5px;
+    /* background: #babeb9; */
+    box-sizing: border-box;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+    overflow: hidden;
+}
+
+section div span {
+    display: block;
+    width: 50px;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    color: silver;
+    /* background: red; */
+    margin: 0 5px;
+}
+
+section div input {
+    flex: 1;
+    border: none;
+    border-left: 2px solid silver;
+    background: transparent;
+    padding: 3px 10px;
+    font-size: 18px;
+    color: silver;
+    outline: none;
+}
+
+section .dlzc {
+    box-shadow: none;
+    display: flex;
+    justify-content: space-around;
+    /* background: red; */
+}
+
+section .dlzc button {
+    width: 100px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: silver;
+    border-radius: 10px;
+    margin: -3px 10px 0 10px;
+    box-sizing: border-box;
+}

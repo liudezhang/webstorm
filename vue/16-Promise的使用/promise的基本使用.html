@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // 定时器的异步操作
+  // 1、使用setTimeout
+  setTimeout(() => {
+    console.log('刘德樟')
+  }, 2000)
+
+  //  异步
+  /*
+  * resolve,reject 本身又是函数
+  * resolve  成功解决
+  * reject   失败处理
+  * */
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // 成功时候调用resolve
+      // resolve('刘德樟');
+      // 失败时候调用
+      // reject('error')
+    }, 2000)
+  }).then((data) => {
+    // 成功执行
+    for (let i = 0; i < 5; i++) {
+      console.log(i + data)
+    }
+  }).catch((err) => {
+    // 失败执行
+    console.log('err')
+  })
+
+
+  // Promise的另外处理形式
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // resolve('成功');
+      reject('失败');
+    }, 1500)
+  }).then(res => {
+    console.log(res);
+  }, err => {
+    console.log(err);
+  })
+
+</script>
